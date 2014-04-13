@@ -44,3 +44,4 @@ int Update();
 int Simple();
 
 void searchMenu(Store store);
+void updateMenu(Store store);

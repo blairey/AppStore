@@ -53,7 +53,17 @@ int main()
 				break;
 			case 4:
 				clearScreen();
-				cout<<"case 4";
+				cout<<"update an app";
+				int selectedApp;
+				clearScreen();
+				cout<<'\n'<<"select an app ID\n";
+				store.displayAllApps();
+				cin >> selectedApp;
+				clearScreen();
+				store.deleteApp(selectedApp);
+				store.addApp();
+				store.saveAllApps();
+				clearScreen();
 				break;
 			case 5:
 				cout<<'\n'<<"please enter app information\n";
@@ -124,6 +134,24 @@ int changeLineBasedOnInput(char key, int activeMenuLine)
 void clearScreen()
 {
 	system("cls");
+}
+
+void updateMenu(Store store)
+{
+	int selectedApp;
+	clearScreen();
+	cout<<'\n'<<"select an app ID\n";
+	store.displayAllApps();
+	cin >> selectedApp;
+	clearScreen();
+
+	//do our stuff
+	store.deleteApp(selectedApp);
+	store.addApp();
+	store.saveAllApps();
+	system("pause");
+	clearScreen();
+
 }
 
 void searchMenu(Store store)

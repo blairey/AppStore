@@ -41,12 +41,7 @@ void Store::displayApp(int appNumber)
 {
 	App app = appList[appNumber];
 	displayApp(app);
-	//cout << "number: "	<<	appNumber				<<	'\t';
-	//cout << "name: "	<<	app.name				<<	'\t';
-	//cout << "rating: "  <<	app.rating				<<	'\t';
-	//cout << "price: "   <<	app.price	<<	"gbp"	<<	'\t';
-	//cout << "platform: "<<	app.platform			<<	'\n';
-	//cout <<"---------------------------------------------------------------------" ;
+
 }
 
 void Store::displayApp(App app)
@@ -114,18 +109,6 @@ void Store::loadFromFile()
 				values.clear();
 			}
 
-			//for(int i = 0; i < line.length(); i++)
-			//{
-				
-				//if(line[i]== ',')
-				//{
-				//	string subString = line.substr(startPos, i);
-				//	startPos= subString.find_first_of(':') + 1;
-				//	values[j] = subString.substr(startPos);
-				//	j++;
-				//	startPos= i+1;
-				//}
-			//}
 		}
 
 		myfile.close();
